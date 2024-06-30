@@ -26,30 +26,30 @@ Evidence:
 
 Database schema design (
 
-app.delete('/questions/:id', async (req: Request, res: Response) => {
-let id = req.params.id;
-let deleteData = await fsPromises.readFile(library, 'utf8');
-let jsonDeleteData = JSON.parse(deleteData);
-let questionYass = jsonDeleteData.questions.filter(
-(question: Question) => question.id === parseInt(id)
-);
-if (questionYass.length > 0) {
-try {
-let qMatch = jsonDeleteData.questions.filter(
-(question: any) => question.id !== parseInt(id)
-);
-let updatedJsonString = JSON.stringify({ questions: qMatch }, null, ' ');
-await fsPromises.writeFile(library, updatedJsonString);
-console.log('the question has been deleted');
-res.send({ message: 'question has successfully been deleted' });
-} catch (err) {
-console.log(err);
-}
-} else {
-console.log('please revise question id');
-res.send({ message: 'please revise question id' });
-}
-});
+    app.delete('/questions/:id', async (req: Request, res: Response) => {
+    let id = req.params.id;
+    let deleteData = await fsPromises.readFile(library, 'utf8');
+    let jsonDeleteData = JSON.parse(deleteData);
+    let questionYass = jsonDeleteData.questions.filter(
+    (question: Question) => question.id === parseInt(id)
+    );
+    if (questionYass.length > 0) {
+    try {
+    let qMatch = jsonDeleteData.questions.filter(
+    (question: any) => question.id !== parseInt(id)
+    );
+    let updatedJsonString = JSON.stringify({ questions: qMatch }, null, ' ');
+    await fsPromises.writeFile(library, updatedJsonString);
+    console.log('the question has been deleted');
+    res.send({ message: 'question has successfully been deleted' });
+    } catch (err) {
+    console.log(err);
+    }
+    } else {
+    console.log('please revise question id');
+    res.send({ message: 'please revise question id' });
+    }
+    });
 
 )
 
