@@ -279,11 +279,9 @@ Current test implementation (
 
 ## Feedback (For CF's)
 
-> [**Course Facilitator name**]  
+> [**Shaughn**]  
 > [*What went well*]  
-> Made good progress in designing and implementing the database schema and CRUD operations.
-> React components and state management for the shopping cart are well-structured and functional.
+good evidence and learning goals refferenced.
 
 > [*Even better if*]
-> Spend more time on authentication and authorization, focusing on secure implementation and best practices.
-> Improve your testing skills by writing more comprehensive tests and increasing test coverage.
+Like we talked about the images should come with a bit more description of what they are showing and what you did to make it/why you did it. Also you could structure this in a way that its obvious which learning goal you are talking about since you list them in the begining then swap around.
